@@ -69,7 +69,8 @@ public class A_3 {
 
     public static void main(String[] args) throws IOException {
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
-
+        //hackerrank에서 에러없이 통과함
+        
         SinglyLinkedList llist = new SinglyLinkedList();
 
         int llistCount = scanner.nextInt();
