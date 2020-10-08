@@ -67,25 +67,25 @@ public class A_5 {
      */
     static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) {
     	
-    	
-    	System.out.println("pstn:" + position);
-    	SinglyLinkedListNode temp_head = head;
-    	int i = 0;
-    	while(true) {
-    		
-    		if(i+1 == position) break;
-    		
-    		i++;
-    		
-    		System.out.println(head.next.data);
-    		
-    		head = head.next;
-    		
-    	}
-    	
-    	head.next = head.next.next;
-    	head = temp_head;
-    	
+    	if(head != null) {
+	    	SinglyLinkedListNode temp_head = head;
+	    	int i = 0;
+	    	
+	    	if(position == 0) {
+	    		head = head.next;
+	    	}else {
+		    	while(true) {
+		    		
+		    		if(i+1 == position) break;
+		    		i++;
+		    		
+		    		head = head.next;    		
+		    	}
+		    	
+		    	head.next = head.next.next;
+		    	head = temp_head;
+	    	}
+    	} 
     	return head;
     	
 
