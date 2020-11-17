@@ -68,7 +68,31 @@ public class Print_in_reverse {
      *
      */
     static void reversePrint(SinglyLinkedListNode head) {
-
+    	
+    	ArrayList<Integer> node = new ArrayList<>();
+    	
+    	while(true) {
+    		if(head == null) break;
+    		node.add(head.data);
+    		head = head.next;	
+    	}
+    	
+    	for(int i = node.size()-1 ; i >= 0; i--) {
+    		System.out.println(node.get(i));
+    	}
+    	
+    	/* additional answer
+    	 * 
+    	 * if(head == null);
+			else{
+			    ReversePrint(head.next); //recursive
+			    System.out.println(head.data);
+			}
+    	 * 
+    	 * 
+    	 * 
+    	 * 
+    	 */
 
     }
 
